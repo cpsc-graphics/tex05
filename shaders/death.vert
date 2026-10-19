@@ -25,9 +25,12 @@ void main() {
 
     // TO DO: Scale the quad size relative to its center
     // ...
+    pos *= 1.5*scale;
     
     // TO DO: Shift the quad to the desired 2D position
     // 
+    pos += position;
+
     
     gl_Position = vec4(pos, 0.0, 1.0);
     tex = TEXCOORDS[gl_VertexID];

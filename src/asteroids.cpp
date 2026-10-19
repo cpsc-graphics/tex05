@@ -100,6 +100,7 @@ void Asteroids::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     
     // TO DO: Calculate the texture index based on timeInDyingState and DYING_DURATION
     // ...
+    textureIndex = static_cast<int>((timeInDyingState / DYING_DURATION) * NUM_DEATH_TEXTURES);
     
     sf::Texture::bind(&deathTextures[textureIndex]);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
